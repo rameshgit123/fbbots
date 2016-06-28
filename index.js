@@ -139,7 +139,7 @@ function sendGenericloc(sender, l, lng) {
     var optionsget = {
         host: '202.89.107.58', // here only the domain name       
         port: '80',
-        path: '/FBBOT/api/AssignMission?latitude=' + l + '&longitude='+lng+'&id=' + sender + '', // the rest of the url with parameters if needed
+        path: '/BOTAPI/api/AssignMission?latitude=' + l + '&longitude='+lng+'&id=' + sender + '', // the rest of the url with parameters if needed
         method: 'GET' // do GET
     };  
    
@@ -357,7 +357,7 @@ vision.annotate(req).then((res) => {
                         var extServeroptionspost = {
                             host: '202.89.107.58',
                             port: '80',
-                            path: '/FBBOT/api/botmesg',
+                            path: '/BOTAPI/api/botmesg',
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -521,7 +521,7 @@ var http = require('http');
     var extServeroptionspost = {
         host: '202.89.107.58',
         port: '80',
-        path: '/FBBOT/api/AssignMission',
+        path: '/BOTAPI/api/AssignMission',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -566,7 +566,7 @@ function finishupload(sender,token) {
     var optionsget = {
         host: '202.89.107.58', // here only the domain name       
         port: '80',
-        path: '/FBBOT/api/SubmitMission?uid=' + sender + '', // the rest of the url with parameters if needed
+        path: '/BOTAPI/api/SubmitMission?uid=' + sender + '', // the rest of the url with parameters if needed
         method: 'GET' // do GET
     };  
    
@@ -609,7 +609,7 @@ function sendnexttask(mid,id,tok)
     var optionsget = {
         host: '202.89.107.58', // here only the domain name       
         port: '80',
-        path: '/FBBOT/api/assigntask?uid=' + id + '&mid='+mid+'', // the rest of the url with parameters if needed
+        path: '/BOTAPI/api/assigntask?uid=' + id + '&mid='+mid+'', // the rest of the url with parameters if needed
         method: 'GET' // do GET
     };  
    
@@ -659,7 +659,7 @@ var http = require('http');
     var optionsget = {
         host: '202.89.107.58', // here only the domain name       
         port: '80',
-        path: '/FBBOT/api/discountprice?uid=' + id + '&price='+price+'', // the rest of the url with parameters if needed
+        path: '/BOTAPI/api/discountprice?uid=' + id + '&price='+price+'', // the rest of the url with parameters if needed
         method: 'GET' // do GET
     };  
    
@@ -704,7 +704,7 @@ function checkmission(id,tok)
     var optionsget = {
         host: '202.89.107.58', // here only the domain name       
         port: '80',
-        path: '/FBBOT/api/missionstatus?uid=' + id + '', // the rest of the url with parameters if needed
+        path: '/BOTAPI/api/missionstatus?uid=' + id + '', // the rest of the url with parameters if needed
         method: 'GET' // do GET
     };  
    
